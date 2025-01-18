@@ -82,8 +82,8 @@ export const quickSort = async (
     right: number,
     setArr: Dispatch<SetStateAction<number[]>>
   ) => {
-    var i = left;
-    var j = right;
+    let i = left;
+    let j = right;
     while (true) {
       console.log(array[i], i, array[j], j);
       while (i < j && array[i] <= array[j]) {
@@ -120,9 +120,9 @@ export const insertionSort = async (
   array: number[],
   setArr: Dispatch<SetStateAction<number[]>>
 ) => {
-  for (var i = 0; i < array.length - 1; i++) {
-    var minimum_index = i;
-    for (var j = i; j < array.length; j++) {
+  for (let i = 0; i < array.length - 1; i++) {
+    let minimum_index = i;
+    for (let j = i; j < array.length; j++) {
       await sleep(sleepInt);
       if (array[j] < array[minimum_index]) {
         minimum_index = j;
@@ -137,9 +137,9 @@ export const bubbleSort = async (
   array: number[],
   setArr: Dispatch<SetStateAction<number[]>>
 ) => {
-  for (var i = array.length - 1; i > 0; i--) {
-    var maximum_index = i;
-    for (var j = i; j > -1; j--) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let maximum_index = i;
+    for (let j = i; j > -1; j--) {
       await sleep(sleepInt);
       if (array[j] > array[maximum_index]) {
         maximum_index = j;
