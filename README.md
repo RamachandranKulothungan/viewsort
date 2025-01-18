@@ -6,6 +6,10 @@ All algorithms are implemented to sort the array in a sort-of inplace manner. Th
 The components used are minimal, we have reused a single bar chart component to render all algorithms. The components can be found under app/ui/components
 
 ## Getting Started
+You can view the deployed app at: https://ramachandrankulothungan.github.io/viewsort/
+
+OR
+
 To get the application running locally, run the development server:
 
 ```bash
