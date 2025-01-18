@@ -10,7 +10,7 @@ import {
 import { ChangeEvent, useState } from "react";
 
 export default function Graphs() {
-  const [arrLength, setArrLength] = useState(150);
+  const [arrLength, setArrLength] = useState(75);
   const [state, setState] = useState("complete");
   const [yValues, setYValues] = useState(generateRandomNumbers(arrLength));
   const [mergeArray, setMergeArray] = useState([...yValues]);
@@ -36,6 +36,7 @@ export default function Graphs() {
       bubbleSort([...yValues], setBubbleArray),
       quickSort([...yValues], 0, arrayCopy.length - 1, setQuickArray),
     ]);
+    setYValues([...mergeArray])
     setState("complete");
   };
 
@@ -66,6 +67,16 @@ export default function Graphs() {
         >
           Generate New Array
         </button>
+        { (state === "inprogress") &&
+          <div className="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </div>
+        }
+        { (state !== "inprogress") &&
+          <p className=""></p>
+        }
       </div>
       <div className="grid gap-4 grid-cols-2 px-4">
         <div className="">
