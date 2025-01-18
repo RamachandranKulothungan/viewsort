@@ -28,10 +28,10 @@ export default function BarChart({
   color: string;
   algorithm: string;
 }) {
-  var arrLength = yValues.length;
-  var xValues = Array.from({ length: arrLength }, () => "");
+  const arrLength = yValues.length;
+  const xValues = Array.from({ length: arrLength }, () => "");
 
-  var barColors = Array.from({ length: arrLength }, () => color);
+  const barColors = Array.from({ length: arrLength }, () => color);
   const data = {
     labels: xValues,
     datasets: [
