@@ -10,16 +10,16 @@ import {
 import { ChangeEvent, useState } from "react";
 
 export default function Graphs() {
-  var [arrLength, setArrLength] = useState(150);
-  var [state, setState] = useState("complete");
-  var [yValues, setYValues] = useState(generateRandomNumbers(arrLength));
-  var [mergeArray, setMergeArray] = useState([...yValues]);
-  var [insertArray, setInsertArray] = useState([...yValues]);
-  var [bubbleArray, setBubbleArray] = useState([...yValues]);
-  var [quickArray, setQuickArray] = useState([...yValues]);
+  const [arrLength, setArrLength] = useState(150);
+  const [state, setState] = useState("complete");
+  const [yValues, setYValues] = useState(generateRandomNumbers(arrLength));
+  const [mergeArray, setMergeArray] = useState([...yValues]);
+  const [insertArray, setInsertArray] = useState([...yValues]);
+  const [bubbleArray, setBubbleArray] = useState([...yValues]);
+  const [quickArray, setQuickArray] = useState([...yValues]);
 
   const handleGenerate = () => {
-    var newArray = generateRandomNumbers(arrLength);
+    const newArray = generateRandomNumbers(arrLength);
     setYValues([...newArray]);
     setMergeArray([...newArray]);
     setInsertArray([...newArray]);
